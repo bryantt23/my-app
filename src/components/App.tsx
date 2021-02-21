@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header'
+import Content from './Content'
 import Total from './Total'
 
 const App: React.FC = () => {
@@ -22,15 +23,7 @@ const App: React.FC = () => {
   return (
     <div>
       <Header courseName={courseName} />
-      <p>
-        {courseParts[0].name} {courseParts[0].exerciseCount}
-      </p>
-      <p>
-        {courseParts[1].name} {courseParts[1].exerciseCount}
-      </p>
-      <p>
-        {courseParts[2].name} {courseParts[2].exerciseCount}
-      </p>
+      <Content courseParts={courseParts} />
       <Total courseParts={courseParts} />
     </div>
   )
