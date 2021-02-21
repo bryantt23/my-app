@@ -1,7 +1,6 @@
 import React from 'react'
 interface TotalProps {
     courseParts: Array<{ exerciseCount: number }>;
-
 }
 
 const Total: React.FC<TotalProps> = (props) => {
