@@ -26,7 +26,11 @@ interface Description extends CoursePartBase {
   description: string;
 }
 
-export type CoursePart = CoursePartOne | CoursePartTwo | CoursePartThree
+interface MyInterface extends CoursePartBase, Description {
+  name: "My interface"
+}
+
+export type CoursePart = CoursePartOne | CoursePartTwo | CoursePartThree | MyInterface
 
 
 ReactDOM.render(<App />, document.querySelector("#root"))

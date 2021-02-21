@@ -20,6 +20,10 @@ const Part: React.FC<PartProps> = ({ course }) => {
             return (
                 <div>{course.name} {course.exerciseCount} {course.groupProjectCount}</div>
             )
+        case "My interface":
+            return (
+                <div>{course.name} {course.exerciseCount} {course.description}</div>
+            )
         default:
             break;
     }
