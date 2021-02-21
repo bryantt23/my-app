@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header'
+import Total from './Total'
 
 const App: React.FC = () => {
   const courseName = "Half Stack application development"
@@ -30,10 +31,7 @@ const App: React.FC = () => {
       <p>
         {courseParts[2].name} {courseParts[2].exerciseCount}
       </p>
-      <p>
-        Number of exercises{' '}
-        {courseParts.reduce((carry, part) => carry + part.exerciseCount, 0)}
-      </p>
+      <Total courseParts={courseParts} />
     </div>
   )
 }
