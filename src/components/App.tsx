@@ -1,8 +1,9 @@
 import React from 'react';
+import Header from './Header'
 
-const App: React.FC = ()=>{
-  const courseName="Half Stack application development"
-  const courseParts=[
+const App: React.FC = () => {
+  const courseName = "Half Stack application development"
+  const courseParts = [
     {
       name: "Fundamentals",
       exerciseCount: 10
@@ -17,9 +18,9 @@ const App: React.FC = ()=>{
     }
   ]
 
-  return(
+  return (
     <div>
-      <h1>{courseName}</h1>
+      <Header courseName={courseName} />
       <p>
         {courseParts[0].name} {courseParts[0].exerciseCount}
       </p>
@@ -31,7 +32,7 @@ const App: React.FC = ()=>{
       </p>
       <p>
         Number of exercises{' '}
-        {courseParts.reduce((carry,part)=>carry+part.exerciseCount, 0)}
+        {courseParts.reduce((carry, part) => carry + part.exerciseCount, 0)}
       </p>
     </div>
   )
